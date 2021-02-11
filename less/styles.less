@@ -1,0 +1,737 @@
+/* Fonts family */
+@font-face {
+    font-family: 'ProximaNova_reg';
+    src: url('../fonts/ProximaNova-Regular.eot');
+    src: url('../fonts/ProximaNova-Regular.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/ProximaNova-Regular.woff2') format('woff2'),
+        url('../fonts/ProximaNova-Regular.woff') format('woff'),
+        url('../fonts/ProximaNova-Regular.ttf') format('truetype'),
+        url('../fonts/ProximaNova-Regular.svg#ProximaNova-Regular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'ProximaNova_bold';
+    src: url('../fonts/ProximaNova-Bold.eot');
+    src: url('../fonts/ProximaNova-Bold.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/ProximaNova-Bold.woff2') format('woff2'),
+        url('../fonts/ProximaNova-Bold.woff') format('woff'),
+        url('../fonts/ProximaNova-Bold.ttf') format('truetype'),
+        url('../fonts/ProximaNova-Bold.svg#ProximaNova-Bold') format('svg');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+.reg () {
+	font-family: 'ProximaNova_reg', sans-serif;
+}
+.bold() {
+	font-family: 'ProximaNova_bold', sans-serif;
+}
+
+/* Colors */
+@btn-color: #fcb303;
+@icons-color: #46b814;
+@text: #1a1820;
+@danger: #ff0000;
+@bg-light: #f5f5f5;
+@light: #fff;
+@border-input: #dddddd;
+@problems-color: #e8e8e8;
+@upsell-bg:#286b0a;
+
+
+
+
+/* Basic settings */
+html {
+	font-size: 10px;
+}
+body {
+	.reg()
+}
+a:hover{
+	text-decoration: none;	
+}
+button, input, a, textarea{
+	&:focus {
+		outline: none;
+	}
+}
+// оформление форм
+.form{
+			// Поле для ввода
+		&-input, &-textarea {
+			display: block;	
+			margin: 2rem 0;
+			width: 100%;
+			border: 1px solid @border-input;
+			border-radius:5px;
+			padding: 1.5rem;	
+		}
+		// Подписи к полям
+		label {
+			position: absolute;
+			left:50%;
+			transform: translateX(-50%) translateY(-50%);	
+			padding: 0.5rem;
+			font-size: 1.3rem;		
+			background-color: @light;
+		}
+		// Кнопка отправить заявку
+		&-btn {
+			display: block;	
+			width: 100%;	
+			height: 5.5rem;	
+			font-size: 1.6rem;	
+		}
+}
+.header-logo {
+	width: 90px;
+	height: 90px;
+}
+.button {
+	padding: 1rem 3rem;
+	border-radius: 8px;	
+	font-size: 1.2rem;	
+	background-color: @btn-color;
+	color: @light;
+	text-transform: uppercase;
+	border: none;
+	&:hover {
+		cursor: pointer;
+		background-color: darken(@btn-color, 5%);
+	}
+}
+
+
+/* Typography */
+
+section {
+	padding: 10rem 0;
+}
+/* main */
+
+.main{
+	padding: 3rem 0 5rem;
+	background: #fff url(../img/malyar.jpeg) center center no-repeat;
+	background-position-y:60%;
+	background-size:cover;
+
+
+	&-content {
+		margin-top: 10rem ;
+		//Главный заголовок 
+		h1 {
+			margin-bottom: 4rem;
+			.bold();
+			font-size: 4rem;
+			line-height: 1.45;
+			text-transform: uppercase;
+		}
+		p {
+
+		}
+	}
+	// Подзаголовок
+	&-subtitle {
+		margin-bottom: 4rem;
+		font-size: 2.4rem;
+	}
+	// Зеленый ярлык
+	span {
+		display: inline-block;
+		padding: 3rem 5rem;
+		font-size: 1.8rem;
+		color: @light;
+		background-color: @icons-color;
+		text-align: center;
+		// Цифра 300 сом
+		strong {
+			font-size: 3rem;
+			.bold();
+		}
+	}
+	// Оплата по факту
+	&-trigger {
+		margin-top: 3rem;
+		display: block;
+		font-size: 2.2rem;
+		text-transform: uppercase;
+		.bold();
+	}
+	// Главная форма
+	&-form {
+		padding: 4rem 5rem;
+		background-color: @light;
+		text-align: center;		
+		// Заголовок формы
+		&-header {
+			margin-bottom: 4rem;	
+			font-size: 1.7rem;
+				strong {
+					font-size: 1.75rem;	
+				}
+		}
+
+		// Подпись под кнопкой
+		small {
+			display: block;
+			margin-top: 1.5rem;
+			font-size: 1.1rem;		
+		}
+	}
+}
+.phone-link {
+	display: inline-block;		
+	.bold();	
+	font-size: 1.9rem;	
+	height: 7rem;
+	line-height: 7rem;
+	color: @text; 
+}
+.header{
+	height: 7rem;	
+}
+.wrap {
+	display: table;	
+	text-align: right;
+	widows: 100%;
+	height: 7rem;		
+	&-block {	
+		display: table-cell;
+		vertical-align: middle;
+	}
+}
+.this {
+	layout: 	;
+}
+// Оформление секции с преимуществами
+
+.section-header {
+	&_light {
+	}
+	h2 {
+		color:@light;
+		font-size: 3.6rem;
+		.bold();
+	}
+	p {
+		color:@light;
+		font-size: 1.4rem;
+	}
+	margin: 2rem 0 10rem;
+	.bold();
+	font-size: 3.6rem;
+	text-align: center;
+}
+.features {
+	&-block{
+		text-align: center;
+		h3{
+			.bold();
+			font-size: 2rem;
+			margin-bottom: 3rem;
+		}
+		p {
+			display: inline-block;
+			width: 80%;
+			font-size: 1.4rem;
+		}
+	}
+	&-img {
+		height: 8rem;
+		margin-bottom: 3rem;
+		img {
+			display: block;
+			margin: 0 auto;
+			margin-top:;
+		}
+	}
+}
+.features-slider h3{
+	margin-top: 5rem;
+}
+.slick-active{
+	outline:none;
+}
+.arrow {
+	top:50%;
+	transform:translateY(-50%); 
+	position: absolute;
+	z-index: 99;
+	width: 2rem;
+	height: 2rem;
+	border: none;	
+}
+.prev {
+	left:0;
+	background: url(../arrow-left.png) center no-repeat;
+	background-size: 70%;
+}
+.next {
+	background: url(../arrow-right.png) center no-repeat;
+	right:0;
+	background-size: 70%;
+}
+
+// Оформление модальных окон
+.popup {
+	display:none;
+	position:fixed;
+	left:0;
+	right:0;
+	top:0;
+	bottom:0;
+	width: 100%;
+	z-index:9;
+	background-color:rgba(0, 0, 0, 0.5);
+	&-content {
+		position:fixed;
+		left:50%;
+		top:10%;
+		background-color:@light;
+		transform:translateX(-50%);
+		padding:4rem 6rem;
+	}
+	&-form{
+		margin-top:3rem;
+		padding:0;
+	}
+	&-close{
+		position: absolute;
+		top:-1.5rem;
+		right:-2rem;
+		width:2rem;
+		text-align: center;
+		border: none;
+		background-color: transparent;
+		font-size: 3rem;
+		color:@light;
+	}
+	&-content {
+		text-align: center;	
+	}
+	&-header {
+		.bold();
+	}
+}
+.price {
+
+	background-color: #398f39;
+	img {
+		max-width: 30rem;
+		width:100%;
+		height:270px;
+		display: inline-block;
+		margin-bottom: 2rem;
+	}
+	&-header-btn{
+		margin-top:2.5rem ;
+	}
+	// Карточки с тарифами
+	&-block {
+		margin-top:8rem;
+		span{
+			font-size: 1.7rem;
+		}
+		padding: 1rem 3rem 4rem;
+		min-height: 50rem;
+		background-color: @light;
+		box-shadow:7px 12px 21px 0px rgba(0,0,0,0.17); 
+		text-align: center;	
+		h4{
+			margin: 3rem 0;
+			font-size: 1.9rem;	
+			.bold();
+		}
+	}
+	&-tag {
+		display:block;
+		margin-bottom: 2rem;
+		font-size: 1.9rem;
+	}
+	&-list {
+		li{
+			&:before {
+				content:'';
+				display: inline-block;
+				width: 1.5rem;
+				height: 1.5rem;
+				background: url(../img/галочка.png) no-repeat center;
+				background-size: 20px;
+				margin-right: 5px;
+				background-color: @light;
+				vertical-align: middle;
+			}
+		}
+		padding:0;
+		.reg();
+		min-height: 14rem;
+		font-size: 1.6rem;
+		list-style:none;
+		line-height: 1.6; 
+	}
+}
+.box {
+	width: 100px;
+	height: 100px;
+	background-color: red;
+}
+// Секция с отзывами
+.feedback {
+	position: relative;	
+	background:url(../img/backg-feedback.jpg) no-repeat center;
+	background-size:cover;
+	&-text{
+		position: relative;
+		margin-top: 3rem; 
+		padding:1rem;
+		border:2px solid @icons-color;
+		font-style: italic;
+		font-size: 1.55rem;
+		&::before {
+			content:'';
+			display:block;
+			position: absolute;
+			top:-2rem;
+			left:4rem;
+			width:2rem;
+			height:2rem;				
+			background-color: @light;												
+			border:2px solid @icons-color;
+			border-bottom: none;
+			border-top-right-radius:120px;
+		}
+
+	}
+	&-prev-btn{
+		left:-4rem;
+	}
+	&-next-btn{
+		right:-4rem;
+	}
+	&-slider{
+		padding:5rem 6rem;
+		background-color: @light;
+		box-shadow:6px 10px 18px 0px rgba(0, 0, 0, 0.11);
+		p{
+			font-size: 1.6rem;
+		}
+		.media{
+			margin-top: 3rem;
+			font-size: 1.55rem;
+			h4{
+				.bold();
+			}
+		}
+		&-btn{
+			position: absolute;
+			top:50%;
+			transform:translateY(-50%);
+			width: 4rem;
+			height: 5rem;
+			border:none;
+			img {
+				width: 50%;
+			}
+		}
+	}
+	// Форма огбратной связи
+	&-form{
+		margin-top: 5.5rem;
+		padding: 4rem 10rem;
+		background-color: @light;
+		text-align: center;
+		h3{
+		.bold();
+		font-size: 2rem;
+		margin-bottom: 1rem;
+		}
+		label{
+			transform:translate(-50%, 5.5px);
+		}
+	}
+	&-btn{
+		max-width:30rem;
+		margin:auto;
+	}
+}
+// Рука в фоне
+.hand{
+	position:absolute;
+	top:80%;
+	left:-7rem;
+	max-width:35rem;
+}
+.mr-3{
+	width:50px;
+}
+.nachalo-rabot{
+	margin-top: 4rem;
+}
+.zavershenie-rabot{
+	margin-top: 4rem;
+}
+.scheme{
+	.shema-rabot{
+		color:black;
+	}
+	h3{
+		font-size: 2rem;	
+		.bold();
+	}
+	p{
+		font-size: 1.7rem;	
+	}
+}
+
+// Все на 100% включено
+.all-inclusive{
+	position:relative;
+	.section-header{
+		h2 {
+			color:black;
+		}
+		p{
+			color:black;
+			font-size: 1.7rem;	
+		}
+	}
+	.media{
+		position:relative;
+		min-height: 11rem;
+		h4 {
+			position:absolute;
+			margin-left:1.5rem;
+			top: 1rem;
+			.bold();
+			font-size: 1.7rem;	
+
+		}
+		p{
+			position:absolute;
+			margin-left:1.5rem;
+			top:4.5rem;
+			font-size: 1.5rem;	
+		}	
+	}
+}
+
+.circle{
+	display: inline-block;
+	background-color:@icons-color;
+	width:100%;
+	height:100%;
+	border-radius:50%;
+
+	&-border{
+		display: inline-block;
+		width:5rem;
+		padding:0.3rem;
+		height:5rem;
+		border:2px solid @icons-color;
+		border-radius: 50%;
+		text-align: center;	 
+		line-height: 4rem;	
+		color:@light;
+		.bold();
+		font-size: 1.9rem;
+	}
+}
+.problems{
+	&-list{
+		border:4px solid;
+		padding:2rem;
+		min-height:42rem;
+		h4{
+			font-size: 2.1rem;	
+			.bold();
+		}
+		ul{
+			font-size: 1.7rem;
+			list-style:none;
+			padding-left:0;
+			padding-top: 2rem;	
+			li{
+				padding-left: 3.5rem;	
+				position: relative;
+				margin-bottom: 3rem;
+			}
+		}
+		&_bad{
+			ul li::before{
+				background:url(../img/krestik.png) center no-repeat;
+				background-size:80%;
+			}
+			border-color:@problems-color;
+			h4{
+				opacity: 0.5;
+			}
+		}
+		&_good{
+			border-color:@icons-color;
+			ul li::before{
+				background:url(../img/галочка.png) center no-repeat;
+				background-size:80%;
+			}
+		}
+		ul li::before{
+			position:absolute;
+			left:0;
+			top:50%;
+			transform:translateY(-50%);
+			content:'';
+			width:3rem;
+			height:4rem;
+		}
+	}
+	.section-header{
+		h2{
+			color:black;
+		}
+	}
+}
+// Секция материалов
+.materials{
+	background: @light url(../img/backg-feedback.jpg) center no-repeat;
+	background-size:cover;
+	&-offer{
+		margin-top: 4rem;
+	}
+	&-link{
+		color:@icons-color;
+		font-size: 1.7rem;
+		border-bottom:1px dotted @icons-color;
+		&:hover{
+			color:darken(@icons-color, 10%);
+		}
+	}
+	&-slider{
+		padding-top: 5rem;
+	}
+	img{
+		display: block;
+		margin:0 auto;
+	}
+	h2,p{
+		color:black;
+	}
+	p{
+		font-size: 1.7rem;
+		.reg();
+	}
+}
+
+// Посмотрите как мы работаем
+.tour{
+	background: @light url(../img/штукатурщик-для-тур.png) 0 80% no-repeat;
+	&-subtitle{
+		font-size: 2.2rem;
+	}
+}
+// Дополнительные услуги
+.upsell{
+	background: @upsell-bg;
+	p{
+		font-size: 1.6rem;	
+	}
+	&-block{
+		img{
+			display: inline-block;
+			margin-bottom: 2rem;
+			max-width:350px;
+			height:270px;
+		}
+		p{
+			font-size: 2rem;
+		}
+		min-height:30rem;
+		text-align: center;
+		color:@light;
+	}
+}
+// Контакты
+.contacts{
+	h2{
+		.bold();
+		font-size: 2rem;	
+	}
+	p{
+		margin-top: 2rem;	
+		margin-bottom: 2rem;	
+		font-size: 1.7rem;
+	}
+	&-link{
+		display: inline-block;	
+		color:@text;
+		border-bottom:1px dotted @text;
+	}
+	// Заголовок для формы
+	&-form{
+		h2{
+			font-size: 1.9rem;	
+			.reg();
+			margin-bottom: 3rem;	
+		}	 
+	}
+}
+// Оформление подвала
+footer{
+	padding: 4rem 0;	
+	.footer{
+		&-contacts{
+			text-align: center;	
+			padding-top: 0.5rem;	
+			p{
+				margin: 0;	
+				font-size: 1.7rem;	
+			}
+		}
+	}
+}
+
+@media(max-width: 992px){
+	.main-title{
+		text-align: center;	
+		&:hover{
+			color:darken(@text,10%);
+		}
+	}
+}
+// позиционирование блока с преимуществами на разных экранах
+@media (max-width:1200px){
+	.price-block{
+		width:450px;
+		margin-left:240px;
+	}
+}
+@media (max-width:992px){
+	.price-block {
+		margin-left:117px;
+	}
+}
+@media (max-width:768px){
+	.price-block {
+		margin-left:31px;
+	}
+}
+@media(max-width:1200px){
+	.scheme-of-job{
+		margin:auto 8rem;
+		text-align: center;	
+	}
+}
+@media(max-width:860px){
+	.hand{
+		display:none;
+	}
+}
+@media(max-width:1200px){
+	.all-inclusive-layout{
+		left:50%;
+	}
+}
